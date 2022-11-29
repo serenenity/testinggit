@@ -1,0 +1,15 @@
+<></> ===> this is known as fragment in Reat
+if you are writing any js in React you write it in a {}
+in React we think of everything as a compunent when designing our  webApp
+
+Props 
+props are like passing arguments to our component to be used inside the componentthen you can use them as an attribute in your Apps
+don't try to modify props in the parent component you can do that in the child
+
+Hook and use-state of the page
+***When can you use props or state
+1. state can be tie to the user interface
+2. state allows you to change and update users values on the go
+3. use state is an example of a hook
+
+Tailwind CSS for React
