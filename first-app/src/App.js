@@ -9,6 +9,44 @@ function App() {
 
   const [role, setRole] = useState('dev'); // creating a state
   const showEmployee = true;
+  const [employees, setEmployees] = useState(
+    [
+      {
+        name: "paul mike",
+        role: "CEO",
+        img: "https://images.pexels.com/photos/4722014/pexels-photo-4722014.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      },
+      {
+        name: "tayo olugbade",
+        role: "CEO",
+        img: "https://images.pexels.com/photos/7646653/pexels-photo-7646653.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      },
+      {
+        name: "paul mike",
+        role: "CEO",
+        img: "https://images.pexels.com/photos/7646653/pexels-photo-7646653.jpeg?"
+      },{
+        name: "olubunmi feyisayo",
+        role: "CEO",
+        img: "https://images.pexels.com/photos/7646653/pexels-photo-7646653.jpeg?"
+      },
+      {
+        name: "mary ahepke",
+        role: "CEO",
+        img: "https://images.pexels.com/photos/7646653/pexels-photo-7646653.jpeg?"
+      },
+      {
+        name: "pofi able",
+        role: "CEO",
+        img: "https://images.pexels.com/photos/7646653/pexels-photo-7646653.jpeg?"
+      },
+      {
+        name: "paul mike",
+        role: "CEO",
+        img: "https://images.pexels.com/photos/7646653/pexels-photo-7646653.jpeg?"
+      }
+    ]
+  )
   return (
     <div className="App">
       {showEmployee ? 
@@ -22,13 +60,19 @@ function App() {
                 setRole(e.target.value); // you never assign directly to a state but you do that through the setRole like a function.
               }}
             />
-            <Employee name="Paul" role="CEO"/>
-            <Employee name="TY" role="Co-founder"/>
-            <Employee name="Olubunmi" role={role}/>
-            <Employee />
-            <Employee />
-            <Employee />
-            <Employee />
+            <div className="flex flex-wrap justify-center">
+              {
+                employees.map((employee) => {
+                  return(
+                      <Employee 
+                        name = {employee.name}
+                        role = {employee.role}
+                        img = {employee.img}
+                      />
+                  )
+                })
+              }
+            </div>
           </>
         )
       :

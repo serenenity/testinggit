@@ -11,5 +11,15 @@ Hook and use-state of the page
 1. state can be tie to the user interface
 2. state allows you to change and update users values on the go
 3. use state is an example of a hook
+     {/* <h1 className="font-bold text-3xl"> Here is {props.name} </h1>
+            {/* <p>{props.role ? props.role : "No role"}</p> */}
+            {/* the line of code above and below works the same way */}
+            {props.role ? <p>{props.role}</p> : <p>No role</p> } */}
 
 Tailwind CSS for React
+Tailwind is a CSS framework.
+We are going to be using it to write our react app and make live easy for us here.
+Visit Tailwind.com to learn more and for documentation
+
+Working with array using state and how you can use MAp to loop through the array
+guid {Globally Uniqe Identifier}> for random id values ==> npm install uuid;  import {v4 as uuidv4} from 'uuid';
